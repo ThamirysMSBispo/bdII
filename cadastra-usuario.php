@@ -5,27 +5,27 @@
 ?>
 
 <?php 
-function inseriUsuario($conexao, $nome, $senha){
+function inseriUsuario($conexao, $email, $senha){
 
 	$senhaMd5 = md5($senha);
 
-	 $query = "insert into usuarios (nome, senha) values ('{$nome}', '{$senhaMd5}')";
+	 $query = "insert into usuarios (email, senha) values ('{$email}', '{$senhaMd5}')";
 
 
 	 return mysqli_query($conexao, $query);
 }
 
-$nome = $_GET["nome"];
+$email = $_GET["email"];
 $senha = $_GET["senha"];
 
 
-if (inseriUsuario($conexao, $nome, $senha)){?>
+if (inseriUsuario($conexao, $email, $senha)){?>
 
-	<p class="text-success">Usuário <?= $nome; ?>, <?= $senha; ?> foi cadastrado</p>
+	<p class="text-success">Usuário <?= $email; ?>, <?= $senha; ?> foi cadastrado</p>
 
 <?php } else { ?>
 
-	<p class="text-danger">Usuário <?= $nome; ?>, <?= $senha; ?> não foi cadastrado</p>
+	<p class="text-danger">Usuário <?= $email; ?>, <?= $senha; ?> não foi cadastrado</p>
 <?php
 
 }

@@ -1,29 +1,54 @@
 <!DOCTYPE html>
  <html>
  <head>
+ 	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
  	<title>Academia</title>
- <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
- <link rel="stylesheet" type="text/css" href="css/academia.css">
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/academia.css">
+	 		<link href="css/signin.css" rel="stylesheet">
+
+
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
  </head>
  <body>
- 	<div class="navbar fixed-top navbar-light bg-primary">
+ 	
 
- 		<div class="container">	
- 			<div class="navbar-header">
+ 	
 
- 				  <a  href="index.php" class="badge badge-primary"><h1>FITNESS</h1></a>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              
+              <a class="navbar-brand" href="index.php">FITNESS</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                
+                <li><a href="academias-lista.php">Academias</a></li>
+                <!-- <li><a href="index.php">Home</a></li> -->
+                <li><a href="academia-formulario.php">Cadastro</a></li>
+                <li><a href="login-formulario.php">Login</a></li>
+              
+              </ul>
+            </div>
+          </div>
+        </nav>
 
- 				
- 			</div>
- 			<div>
- 				<ul class="nav navbar-nav">
- 					<li> <a href="login-formulario.php" class="badge badge-primary"><h6>Login</h2></a></li>
- 					<li> <a href="usuario-formulario.php" class="badge badge-primary">Cadastre-se</a></li>
+      </div>
+    
 
- 				</ul>
- 			</div>
- 		</div>
 
- 	</div>
+
  	<div clss="container">
  		<div class="principal">
+     <?php $_GET['i'] = 1 ?>

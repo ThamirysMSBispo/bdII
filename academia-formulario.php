@@ -2,55 +2,89 @@
 <?php include("cabecalho.php"); 
 include("conecta.php");
 include("banco-categoria.php");
+include("autentica-usuario.php");
 
+
+verificaUsuario();
 
 $cat = listaCategorias($conexao);
 
 ?>
-<html>
-	<form action="cadastra-academia.php" method="post">
-		<h2>Cadastro</h2> <br>
-		Nome: <input type="text" name="nome"> <br> <br>
-		Telefone: <input type="tel" name="telefone" value="(00) 00000-0000" id="example-tel-input"> <br> <br>
-		Email: <input type="email" name="email"> <br> <br>
-		CNPJ: <input type="text" name="cnpj"> <br> <br>
-		descrição: <textarea  name="descricao"></textarea><br><br>
 
 
 
-		<tr>
-    <td></td>
-    <td><input type="checkbox" name="validacao" value="true"> Usado</td>
-</tr>
+	<div class="page-header">
+		<h1>FORMULÁRIO</h1>
 
-		<tr>
-		<td>Categoria</td>
-		<td>
-			<select name="categoria_id">
-			<?php foreach ($cat as $categoria): ?>
+	</div>
 
-				<option value="<?= $categoria['id']?>">
-
-						<?= $categoria['nome']?>
-
-
-				</option>
+	<div class="row">
+		<div class="col-md-6">
+			<h3>Cadastre-se</h3>
+			<form action="cadastra-academia.php" method="post">
 				
-			<?php endforeach ?>
-			</select>
+				<div class="form-group">
+					<label>Nome</label>
+					<input type="text" class="form-control" name="nome">
+					
+				</div>
+				<div class="form-group">
+					<label>Telefone</label>
+					<input type="tel" class="form-control" name="telefone">
+					
+				</div>
+				<div class="form-group">
+					<label>Email</label>
+					<input type="email" class="form-control" name="email">
+					
+				</div>
+				<div class="form-group">
+					<label>CNPJ</label>
+					<input type="text" class="form-control" name="cnpj">
+					
+				</div>
+				<div class="form-group">
+					<label>Descrição</label>
+					<textarea  name="descricao" class="form-control"></textarea>
+					
+				</div>
 
 
-		</td>
+				
 
-	</tr>
+				<div>
+					<select name="categoria_id" class="form-control">
+						<?php foreach ($cat as $categoria): ?>
 
-		<input type="submit" value="cadastrar"> <br>
+						<option value="<?= $categoria['id']?>">
 
-	</form>	
+							<?= $categoria['nome']?>
+
+
+						</option>
+				
+						<?php endforeach ?>
+					</select>
+			
+
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="validacao" value="true"> Validacao
+						</label>
+					
+			</div>
+				</div>
+
+					<input type="submit" value="cadastrar"> <br>
+
+			</form>
+			
+		</div>
+		
+	</div>
 
 
 
-</html>
-
+	
 
 <?php include("rodape.php") ?>

@@ -1,3 +1,4 @@
+
 <?php
 
 function listaAcademias($conexao){
@@ -25,7 +26,7 @@ function inseriAcademia($conexao, $nome, $telefone, $email, $cnpj, $descricao, $
 
 	 $query = "insert into academias (nome, telefone, email, cnpj, descricao, categoria_id, validacao) values ('{$nome}', '{$telefone}', '{$email}', '{$cnpj}', '{$descricao}', '{$categoria_id}', '{$validacao}')";
 
-	 	echo $query;
+	 	//	echo $query;
 
 	 return mysqli_query($conexao, $query);
 }
