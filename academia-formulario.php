@@ -1,11 +1,11 @@
 
-<?php include("cabecalho.php"); 
+<?php  
 include("conecta.php");
 include("banco-categoria.php");
 include("autentica-usuario.php");
+include("cabecalho.php");
 
 
-verificaUsuario();
 
 $cat = listaCategorias($conexao);
 

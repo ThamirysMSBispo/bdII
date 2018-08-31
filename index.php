@@ -1,6 +1,10 @@
 
- <?php include_once("cabecalho.php") ?>
 <?php include("autentica-usuario.php"); ?>
+
+ 
+ <?php include_once("cabecalho.php") ?>
+
+<!--<?//php include("teste3.php"); ?>-->
 
  <div class="teste2">
  	
@@ -19,22 +23,13 @@
 <?php
 if(isset($_GET["falhaDeSeguranca"])) {
 ?>
-  <p class="alert-danger">Você não tem acesso a esta funcionalidade!</p>
+  <p class="alert-danger">Realize o login para acessar essa área</p>
 <?php
 }
 ?>
 
 
-<?php
-if(usuarioEstaLogado()) {
 
-?>
-<p class="text-success">Você está logado como <?= usuarioLogado() ?></p>
-<a href="logout.php">Deslogar</a></p>
-
-<?php
-}
-?>
 
 <?php
      if(isset($_GET["logout"]) && $_GET["logout"]==true) {
@@ -45,6 +40,7 @@ if(usuarioEstaLogado()) {
 ?>
 
  			<h1> ACADEMIAS </h1><br><br><br><br>
+
 
 <?php if(!isset($_GET["pagina"])) {
 

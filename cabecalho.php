@@ -37,7 +37,84 @@
                 <li><a href="academias-lista.php">Academias</a></li>
                 <!-- <li><a href="index.php">Home</a></li> -->
                 <li><a href="academia-formulario.php">Cadastro</a></li>
-                <li><a href="login-formulario.php">Login</a></li>
+
+                
+
+
+                <li><a href="index-carrinho.php">Serviços</a></li>
+                <li><a href="contato.php">Contato</a></li>
+
+
+
+
+                <?php if(isset($_SESSION["teste"]) && $_SESSION["teste"] == 2) { ?>
+    
+                <li><a href=#></a></li>
+        
+            <li><a href="#"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+
+            <li role="presentation" class="active"><a href="logout.php">Sair</a></li>
+            
+          
+                
+                      
+
+                      <?php
+                    }
+
+                 ?>
+
+                 <?php if(isset($_SESSION["teste"]) && $_SESSION["teste"] !== 2) { ?>
+    
+                <li><a href=#></a></li>
+        
+            <li><a href="#"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+             <li><a href="c#p"></a></li>
+
+            <li role="presentation" class="active"><a href="login-formulario.php">Entrar</a></li>
+            
+          
+                                     
+
+                      <?php
+                    }
+
+                 ?>
+
+
               
               </ul>
             </div>
@@ -52,3 +129,6 @@
  	<div clss="container">
  		<div class="principal">
      <?php $_GET['i'] = 1 ?>
+
+
+

@@ -1,4 +1,4 @@
-<?php include("cabecalho.php"); ?>
+
 <?php include("conecta.php"); ?>
 <?php include("banco-academias.php"); ?>
 <?php  include("autentica-usuario.php"); ?>
@@ -9,6 +9,7 @@ verificaUsuario();
 
 
  ?>
+ <?php include("cabecalho.php"); ?>
 
 <?php if(array_key_exists("removido", $_GET) && $_GET['removido']=='true') { ?>
 
